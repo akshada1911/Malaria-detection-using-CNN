@@ -1,0 +1,30 @@
+{% extends "import.html" %} 
+{% block content %}
+
+<center>
+<br><h2></h2><br>
+    <h1 style="font-family:sans-serif;font-size:200%;position: fixed;left:280px; top:25px;color:rgb(158, 243, 0);"><u>MALARIA DETECTION USING BLOOD CELL IMAGES</u></h1>
+
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+         <input type="file" style="position:fixed; left:80px; top:130px; background-color:#7dac11; width:300px;height:45px;border-radius:45px;box-shadow: 2px 3px 5px rgb(7, 7, 7);" name="file" class="btn btn-success" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+
+    <div class="image-section" style="display:none;">
+         <img id="imagePreview"  class="img-responsive" src="#" style="position:fixed; left:80px; top:200px;  width:250px;height:250px;"/><br><br>
+         <div>
+            <button type="button" style="position:fixed; left:420px; top:130px; background-color:#7dac11; width:100px;height:45px;border-radius: 45px;box-shadow: 2px 3px 5px rgb(7, 7, 7);" class="btn btn-info btn-lg "id="btn-predict">Predict</button>
+         </div>
+    </div>
+
+
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 style="position:fixed; left:80px; top:480px; text-decoration: underline;color: #7dac11;;"id="result">
+        <span> </span>
+    </h3>
+    
+
+</center><br><br>
+{% endblock %}
